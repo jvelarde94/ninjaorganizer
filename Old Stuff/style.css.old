@@ -1,0 +1,50 @@
+/* CSS for Senior Project 
+	Robyn Balduzzi
+	10/3/2016
+
+	very basic CSS
+*/
+
+
+
+body{
+	background-color:MistyRose;
+	font-family: Verdana, sans-serif;
+
+}
+
+h1{
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: center;
+}
+
+
+footer {
+	margin: 10px 0;
+	border-top: solid thin black;
+	border-bottom: solid thick black;
+	padding: 10px;
+	text-align: center;
+}
+
+.textboxheading{
+	color: green;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.sampletext{
+	text-decoration: italic;
+	color: navy;
+	text-align: center;
+}
+
+.textboxes
+{
+	text-align: center;
+}
+
+
+

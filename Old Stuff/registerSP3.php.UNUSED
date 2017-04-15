@@ -1,0 +1,81 @@
+<html>
+<title> Register form</title>
+<head>
+<h2> Register </h2>
+<style>
+body {background-color: rgb(255, 176, 167);
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+	<form 
+	action="registerSP3.php" method="post" enctype="multipart/form-data">
+	<input type="file" name="image">
+	<input type="submit" name="upload" value="Upload Now">
+	</from>
+			
+
+
+
+
+<?php 
+
+//include('connect.php');
+
+
+
+
+//header('Content-type : bitmap; charset=utf-8');
+
+
+
+//takes image from HTML and moves it into image folder
+if(isset($_POST['upload']))
+{
+
+	if($_FILES['image']['error'] > 0)
+	{
+		echo "No file uploaded", "<br/>";
+	}
+	$N="Ninja.png";
+	$image_name = $_FILES['image']['name'];
+	$image_type = $_FILES['image']['type'];
+	$image_size = $_FILES['image']['size'];
+	$image_tmp_name = $_FILES['image']['tmp_name'];
+	move_uploaded_file($image_tmp_name,"Images/".$image_name);
+	
+	
+	echo "<img width = '100' height ='100' src='Images/$image_name'>";
+
+}
+
+
+
+
+
+
+/*
+	if(isset($_POST["encoded_string"]))
+	{
+		$encoded_string = $_POST["$encoded_string"];
+		$image_name = $_POST["image_name"];
+		$decoded_string = base64_decode($encoded_string);
+		$path = 'Images/'.$image_name;
+		$file = fopen($path, 'wb');
+		$is_written = fwrite($file, $decoded_string);
+		fclose($file);
+		
+		if($is_written > 0 )
+		{
+			echo "file uploaded!";
+		}
+	}
+	*/
+?>
+
+</body>
+</html>
+
+
+

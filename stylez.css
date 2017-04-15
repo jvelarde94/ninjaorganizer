@@ -1,0 +1,98 @@
+body{
+  
+  /**background-color: lightgrey;**/
+  background-image: url("Images/Ninja.png");
+  font-family: Verdana, sans-serif;
+
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+  -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#container {
+  width: 100%;
+  margin: 0 auto;
+  border-width: 1px;
+}
+
+#sidebar {
+  width: 10%;
+  margin: 0 auto;
+  border-width: 1px;
+}
+
+#table{
+  width: 100%;
+  margin: 0 auto;
+  border-width: 1px;
+  
+
+}
+
+
+#home{
+  width: 100%;
+  margin: 0 auto;
+  border-width: 1px;
+  
+
+}
+
+#side{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border-width: 1px;
+  
+
+}
+
+
+img {
+  max-width: 100%;
+}
+
+fieldset {
+  border: 1px solid green;
+  background-color: red;
+  color: black;
+  opacity: .8;
+  padding: 0.2em 0.5em;
+}
+
+legend {
+  padding: 0.2em 0.5em;
+  border:1px solid green;
+  color:green;
+  font-size:90%;
+  text-align:right;
+  background-color: white;
+  }
+
+ .row1 {
+    background-color: white
+    padding: 1em 1em;
+    font-weight: bold;
+    font: red;
+  }
+
+  .col-sm-2 {
+    background-image: url("Images/darkergray.png");
+    color: white;
+   
+
+  }
+
+  .col-sm-6{
+   
+  }
+
+  a {
+    color: red;
+  }
+
+  .button {
+    color: black;
+  } 

@@ -1,0 +1,72 @@
+<style>
+
+html {
+  overflow-y:scroll;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="seniorproject.css" rel="stylesheet" type="text/css" > <!-- i dont think this is right --> 
+</head>
+
+<body>
+  <h1>Ninja Organizer: Get Organized, Reach Further</h1>
+  
+	<i>
+		Anyone can get lazy and everyone procrastinates. <br>
+		The key to getting things done is being organized. Whether it be house chores, getting somewhere on time, or starting a business 
+		- organization is key.<br>
+		With this free tool, you can organize your life easily, quickly, and on the go.. <br>
+		~~ Like a ninja! ~~
+	</i>
+	<br><br>
+
+	<strong>Personal goals:</strong> <i>(ex: "Save $100 per week, go to the gym for 1 hour, etc.")</i> <br>
+	<textarea name="message" rows="10" cols="100">
+	</textarea>
+	<br>
+	<input type="submit" value="Save">
+	<form action="personal.php" method="post">
+	<br><br>
+
+	<strong>Professional goals:</strong> <i>(ex: "Put in application for two jobs this week")</i> <br>
+	<textarea name="message" rows="10" cols="100">
+	</textarea>
+	<br>
+	<input type="submit" value="Save">
+	<form action="professional.php" method="post">
+	<br><br>
+
+	<strong>Daily goals:</strong> <i>(ex: "Get 8 hours of sleep tonight")</i> <br>
+	<textarea name="message" rows="10" cols="100">
+	</textarea>
+	<br>
+	<input type="submit" value="Save">
+	<form action="daily.html" method="post">
+	<br><br>
+
+	<strong>Notes:</strong> <i>(Mark your achievements and track your progress)</i> <br>
+	<textarea name="message" rows="10" cols="100">
+	</textarea>
+	<br>
+	<input type="submit" value="Save">
+	<form action="notes.html" method="post">
+	<br><br>
+
+	<!--
+		<a href="personal.html">Personal</a> <br>
+		<a href="professional.html">Professional</a><br>
+		<a href="daily.html">Daily</a><br>
+		<a href="notes.html">Notes</a><br>
+	-->
+
+</body>
+
+<footer>
+	Icon made by <a href="http://www.flaticon.com/authors/darius-dan">darius-dan</a> from www.flaticon.com
+</footer>
+</html>

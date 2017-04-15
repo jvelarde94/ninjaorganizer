@@ -1,0 +1,116 @@
+[07-Nov-2016 23:24:22 UTC] PHP Fatal error:  Call to undefined function session_end() in /home/rbalduzzi/public_html/logout.php on line 3
+[08-Nov-2016 00:39:58 UTC] PHP Fatal error:  Call to undefined function test_input() in /home/rbalduzzi/public_html/loginSP.php on line 39
+[21-Nov-2016 04:24:47 UTC] PHP Fatal error:  Call to undefined function test_input() in /home/rbalduzzi/public_html/registerSP.php on line 35
+[21-Nov-2016 04:25:58 UTC] PHP Fatal error:  Call to undefined function test_input() in /home/rbalduzzi/public_html/registerSP.php on line 35
+[21-Nov-2016 04:26:37 UTC] PHP Fatal error:  Call to undefined function test_input() in /home/rbalduzzi/public_html/registerSP.php on line 35
+[21-Nov-2016 04:27:12 UTC] PHP Fatal error:  Call to undefined function test_input() in /home/rbalduzzi/public_html/registerSP.php on line 35
+[21-Nov-2016 04:28:20 UTC] PHP Fatal error:  Call to undefined function test_input() in /home/rbalduzzi/public_html/registerSP.php on line 35
+[21-Nov-2016 04:29:19 UTC] PHP Fatal error:  Call to undefined function test_input() in /home/rbalduzzi/public_html/registerSP.php on line 36
+[21-Nov-2016 04:30:43 UTC] PHP Fatal error:  Call to undefined function test_input() in /home/rbalduzzi/public_html/registerSP.php on line 36
+[21-Nov-2016 01:55:53 America/New_York] PHP Fatal error:  Call to a member function fetch_object() on a non-object in /home/rbalduzzi/public_html/home.php on line 108
+[21-Nov-2016 01:56:35 America/New_York] PHP Fatal error:  Call to undefined function fetch_object() in /home/rbalduzzi/public_html/home.php on line 108
+[21-Nov-2016 01:59:26 America/New_York] PHP Fatal error:  Call to undefined function fetctAll() in /home/rbalduzzi/public_html/home.php on line 108
+[21-Nov-2016 02:00:00 America/New_York] PHP Fatal error:  Call to undefined function fetchAll() in /home/rbalduzzi/public_html/home.php on line 108
+[21-Nov-2016 02:00:02 America/New_York] PHP Fatal error:  Call to undefined function fetchAll() in /home/rbalduzzi/public_html/home.php on line 108
+[21-Nov-2016 02:06:39 America/New_York] PHP Fatal error:  Call to undefined function fetch() in /home/rbalduzzi/public_html/home.php on line 108
+[14-Dec-2016 18:57:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() expects parameter 1 to be string, object given' in /home/rbalduzzi/public_html/MailNotifier.php:18
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(18): DateTime->__construct(Object(DateTime))
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 18
+[14-Dec-2016 18:58:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() expects parameter 1 to be string, object given' in /home/rbalduzzi/public_html/MailNotifier.php:18
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(18): DateTime->__construct(Object(DateTime))
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 18
+[14-Dec-2016 18:59:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() expects parameter 1 to be string, object given' in /home/rbalduzzi/public_html/MailNotifier.php:18
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(18): DateTime->__construct(Object(DateTime))
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 18
+[14-Dec-2016 19:00:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() expects parameter 1 to be string, object given' in /home/rbalduzzi/public_html/MailNotifier.php:18
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(18): DateTime->__construct(Object(DateTime))
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 18
+[14-Dec-2016 19:01:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() expects parameter 1 to be string, object given' in /home/rbalduzzi/public_html/MailNotifier.php:18
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(18): DateTime->__construct(Object(DateTime))
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 18
+[14-Dec-2016 19:01:48 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() expects parameter 1 to be string, object given' in /home/rbalduzzi/public_html/MailNotifier.php:18
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(18): DateTime->__construct(Object(DateTime))
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 18
+[14-Dec-2016 19:02:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() expects parameter 1 to be string, object given' in /home/rbalduzzi/public_html/MailNotifier.php:18
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(18): DateTime->__construct(Object(DateTime))
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 18
+[14-Dec-2016 19:02:20 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateTime::__construct() expects parameter 1 to be string, object given' in /home/rbalduzzi/public_html/MailNotifier.php:18
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(18): DateTime->__construct(Object(DateTime))
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 18
+[14-Dec-2016 19:03:01 UTC] PHP Fatal error:  Call to a member function format() on a non-object in /home/rbalduzzi/public_html/MailNotifier.php on line 19
+[14-Dec-2016 19:03:16 UTC] PHP Fatal error:  Call to a member function format() on a non-object in /home/rbalduzzi/public_html/MailNotifier.php on line 19
+[14-Dec-2016 19:04:01 UTC] PHP Fatal error:  Call to a member function format() on a non-object in /home/rbalduzzi/public_html/MailNotifier.php on line 19
+[14-Dec-2016 19:17:01 UTC] PHP Fatal error:  Call to a member function sub() on a non-object in /home/rbalduzzi/public_html/MailNotifier.php on line 21
+[14-Dec-2016 19:17:06 UTC] PHP Fatal error:  Call to a member function sub() on a non-object in /home/rbalduzzi/public_html/MailNotifier.php on line 21
+[14-Dec-2016 19:18:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateInterval::__construct(): Unknown or bad format (Pagiglia21@gmail.comH)' in /home/rbalduzzi/public_html/MailNotifier.php:21
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(21): DateInterval->__construct('Pagiglia21@gmai...')
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 21
+[14-Dec-2016 19:18:19 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateInterval::__construct(): Unknown or bad format (Pagiglia21@gmail.comH)' in /home/rbalduzzi/public_html/MailNotifier.php:21
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(21): DateInterval->__construct('Pagiglia21@gmai...')
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 21
+[14-Dec-2016 19:19:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateInterval::__construct(): Unknown or bad format (Pagiglia21@gmail.comH)' in /home/rbalduzzi/public_html/MailNotifier.php:21
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(21): DateInterval->__construct('Pagiglia21@gmai...')
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 21
+[14-Dec-2016 19:20:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateInterval::__construct(): Unknown or bad format (Pagiglia21@gmail.comH)' in /home/rbalduzzi/public_html/MailNotifier.php:21
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(21): DateInterval->__construct('Pagiglia21@gmai...')
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 21
+[14-Dec-2016 19:21:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateInterval::__construct(): Unknown or bad format (Pagiglia21@gmail.comH)' in /home/rbalduzzi/public_html/MailNotifier.php:21
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(21): DateInterval->__construct('Pagiglia21@gmai...')
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 21
+[14-Dec-2016 19:22:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateInterval::__construct(): Unknown or bad format (Pagiglia21@gmail.comH)' in /home/rbalduzzi/public_html/MailNotifier.php:21
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(21): DateInterval->__construct('Pagiglia21@gmai...')
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 21
+[14-Dec-2016 19:22:04 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateInterval::__construct(): Unknown or bad format (Pagiglia21@gmail.comH)' in /home/rbalduzzi/public_html/MailNotifier.php:21
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(21): DateInterval->__construct('Pagiglia21@gmai...')
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 21
+[14-Dec-2016 19:22:35 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateInterval::__construct(): Unknown or bad format (PTagiglia21@gmail.comH)' in /home/rbalduzzi/public_html/MailNotifier.php:21
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(21): DateInterval->__construct('PTagiglia21@gma...')
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 21
+[14-Dec-2016 19:23:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'DateInterval::__construct(): Unknown or bad format (PTagiglia21@gmail.comH)' in /home/rbalduzzi/public_html/MailNotifier.php:21
+Stack trace:
+#0 /home/rbalduzzi/public_html/MailNotifier.php(21): DateInterval->__construct('PTagiglia21@gma...')
+#1 {main}
+  thrown in /home/rbalduzzi/public_html/MailNotifier.php on line 21
+[16-Dec-2016 22:35:56 UTC] PHP Fatal error:  Function name must be a string in /home/rbalduzzi/public_html/account.php on line 131
+[19-Dec-2016 03:35:29 UTC] PHP Fatal error:  Call to undefined function myFunction() in /home/rbalduzzi/public_html/account.php on line 123
+[19-Dec-2016 03:36:36 UTC] PHP Fatal error:  Call to undefined function myFunction() in /home/rbalduzzi/public_html/account.php on line 120
+[19-Dec-2016 03:37:42 UTC] PHP Fatal error:  Call to undefined function myFunction() in /home/rbalduzzi/public_html/account.php on line 113
+[19-Dec-2016 03:38:05 UTC] PHP Fatal error:  Call to undefined function myFunction() in /home/rbalduzzi/public_html/account.php on line 113
+[19-Dec-2016 03:43:02 UTC] PHP Fatal error:  Call to undefined function myFunction() in /home/rbalduzzi/public_html/account.php on line 122
+[19-Dec-2016 03:43:42 UTC] PHP Fatal error:  Call to undefined function myFunction() in /home/rbalduzzi/public_html/account.php on line 122
+[19-Dec-2016 03:48:20 UTC] PHP Fatal error:  Call to undefined function myFunction() in /home/rbalduzzi/public_html/account.php on line 123
+[19-Dec-2016 03:50:37 UTC] PHP Fatal error:  Call to undefined function myFunction() in /home/rbalduzzi/public_html/account.php on line 124
+[19-Dec-2016 03:53:08 UTC] PHP Fatal error:  Call to undefined function alert() in /home/rbalduzzi/public_html/account.php on line 117
+[19-Dec-2016 03:53:21 UTC] PHP Fatal error:  Call to undefined function alert() in /home/rbalduzzi/public_html/account.php on line 117

@@ -1,0 +1,297 @@
+<?php //personal.php
+include("check.php"); //must be logged in
+include("connect.php"); //connect to database
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+
+  <link href="stylez.css" rel="stylesheet">
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/vader/jquery-ui.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+
+</head>
+
+<body> <!-- body background gives layout -->
+  <center>
+    <section id = "container">
+  
+    
+<div class = "main">
+
+
+     <div class="col-sm-2">
+        <div class = "row">
+          <br><br><br><p><?php echo $login_user; ?><p><?php	
+		//****************************SELECT Profile PHOTO***********************************
+		$sql = "SELECT Image FROM users WHERE username = '$login_user' LIMIT 1";
+		$result = mysqli_query($conn,$sql);
+	
+		if ($result)
+	 	 {
+  			$row = mysqli_fetch_assoc($result);
+ 			$imageLocation = $row['Image'];
+ 			echo "<img width = '180' height ='100'  src='$imageLocation'>";
+	 	}
+		else 
+		 {
+			echo "An error occurred: " . mysqli_error(); // Otherwise display the error		
+	 	}	
+		//**************************************************************************************
+		?><br><br>
+		<center>
+			<a href="logout.php"> Logout </a>
+		</center>
+		<br>
+          <p>You have 0 Goals for today.</p>
+   
+      <input style="color:red" type="button" onclick="location.href='home.php';" value="Home"/><br>
+      <input style="color:red" type="button" onclick="location.href='personal.php';" value="Personal"/><br>
+      <input style="color:red" type="button" onclick="location.href='professional.php';" value="Professional"/><br>
+      <input style="color:red" type="button" onclick="location.href='educational.php';" value="Educational"/>
+		
+	
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    
+   
+
+    <img src="Images/peeking-ninja.png">
+    <p>COPYRIGHT US</p>
+            </div>
+        </div>
+
+
+
+
+ <section id = "home">
+    
+
+      <div class="textboxheading">
+    <p>
+        <!-- <img src="personalgoals.png"/> -->
+
+        <h1><a href="home.php"><img src="Images/header.png" /></a></h1>
+        
+    </p>
+    </div>
+ 
+  <div class="col-sm-4">
+
+    <form action="personal.php" method="post" accept-charset="utf-8">
+    <fieldset>
+<h2>Personal Goals: </h2>
+        Goal:<br>
+        <input type="text" name="goalTitle" value="" placeholder="Goal">
+        <br>
+        Description:<br>
+        <textarea name="description" placeholder="Description" rows="10" cols="40"></textarea>
+        <!-- <input type="text" name="description" value="" placeholder="Description"> -->
+        <br>
+        Date:<br>
+        <input type="text" name="dueDate" value="" placeholder="Due Date" id="datepicker">
+		<br>
+            <br>
+            <input type="checkbox" name="MailOn" value="false" > Mail Notification On/Off</input>
+            <br>
+			
+        <br><br>
+        <input type="submit" style="color:black" name="enterGoal" value="Enter Goal">
+        <input type="submit" style="color:black" name="showGoals" value="Show My Personal Goals">
+        </fieldset>
+
+
+    </form>
+
+</div>
+<div class = "col-sm-6">
+
+  
+<?php
+
+//error variables
+$goalerror = "";
+$descerror = "";
+$dueerror = "";
+//$nomatch = "";
+$error = 0;
+
+
+
+
+
+
+
+
+
+if (isset($_POST['enterGoal']))
+{
+    //validate Goal field
+    if (empty($_POST['goalTitle']))
+    {
+        $goalerror = "<center>*Goal Title field is blank.*</center>";
+        $error++;
+        echo $goalerror, "<br>";
+    }
+
+    //validate Description field
+    if (empty($_POST['description']))
+    {
+        $descerror = "<center>*Description field is blank.*</center>";
+        $error++;
+        echo $descerror, "<br>";
+    }
+
+    //validate duedate field
+    if (empty($_POST['dueDate']))
+    {
+        $dueerror = "<center>*Due Date field is blank.*</center>";
+        $error++;
+        echo $dueerror, "<br>";
+    }
+}
+
+include 'loginSP.php';
+
+
+  if(isset($_POST['enterGoal']) && !empty($_POST['goalTitle'])&& !empty($_POST['description']) && !empty($_POST['dueDate'])) //insert data into table if enter goal is clicked
+    {
+    $user = $_SESSION['username'];
+    $goal = $_POST['goalTitle'];
+    $desc = $_POST['description'];
+    $due = $_POST['dueDate'];
+    $goalType = 'Personal';
+
+    $aposGoal = mysqli_real_escape_string($conn, $goal); //ALLOW APOSTROPHES IN SQL GOAL TITLE INPUT
+    $aposDesc = mysqli_real_escape_string($conn, $desc); //ALLOW APOSTROPHES IN SQL DESCRIPTION INPUT
+	
+	if (isset($_POST['MailOn'])) 
+		{
+           $MailOn=1;
+		}
+		else
+		{
+			$MailOn=0;
+		}
+		
+      $sql = "INSERT INTO `goals`(`username`, `title`, `description`, `dueDate`, `goalType`,`MailNotif`,`NotifOn`) VALUES ('$user','$aposGoal','$aposDesc','$due','$goalType','no',$MailOn);";
+  $result = mysqli_query($conn, $sql); //insert date
+      echo "<center><big><big> Goal entered successfully! </big></big></center>";
+    }
+  else if(isset($_POST['enterGoal']))
+    {
+    echo "<center><big> No goal entered. </big></center>";
+    }
+  if(isset($_POST['delete']))
+  {
+    //get the values
+    $id_goal=$_POST['id_goal'];
+    $id_type=$_POST['goalType'];
+    
+     $SQLselect = "delete from goals WHERE id_goal = '$id_goal';";  //delete the selected goal
+     mysqli_query($conn, $SQLselect);//execute the delete query
+      echo "Goal Deleted"; 
+  }
+  if(isset($_POST['save']))
+  {
+    //get the values
+    $id_goal=$_POST['id_goal'];
+    $id_type=$_POST['goalType'];
+    $title=$_POST['goalTitle'];
+    $description=$_POST['description'];
+    $dueDate=$_POST['dueDate'];
+    $title = mysqli_real_escape_string($conn, $title); //ALLOW APOSTROPHES IN SQL GOAL TITLE INPUT
+    $description= mysqli_real_escape_string($conn, $description); //ALLOW APOSTROPHES IN SQL DESCRIPTION INPUT
+    $SQLselect = "UPDATE goals set title='$title', description= '$description',  dueDate='$dueDate' WHERE id_goal = '$id_goal';";  //update goal with the new data ID GOAL IS NOT PUT INTO THE UPDATE
+
+     mysqli_query($conn, $SQLselect);//execute the update query
+     echo "Goal Updated"; 
+    
+  }
+  if(isset($_POST['showGoals']) || isset($_POST['save']) || isset($_POST['delete'])) // show info in table if show goals button is clicked
+    {
+    $user = $_SESSION['username'];
+
+    $goalType = 'Personal';
+
+      $SQLselect = "SELECT id_goal,title, description, dueDate FROM goals WHERE username = '$user' AND goalType = '$goalType';"; //display info in table
+      $result1 = mysqli_query($conn, $SQLselect); //select the data
+
+       // echo $SQLselect;
+
+       //**************Display the chart****************
+
+      echo '<table border="1px soild black" cellpadding="5px" cellspacing="1px" style="font-family:Verdana, Geneva, sans-serif;
+        font-size:15px; background-color:#E1E1E1" width="100%">
+            <tr bgcolor="#ffccff" style="font-weight:bold">
+      
+            <th>Goal Title</th>
+            <th>Description</th>
+            <th>Due Date</th>
+
+      <th>Delete<th>
+      <th>Update<th>
+      
+      
+            </tr>';
+
+     while ($row = mysqli_fetch_row($result1))
+      {
+     
+      echo '<tr>';
+      echo "<td>".$row[1]."</td>";
+      echo "<td>".$row[2]."</td>";
+      echo "<td>".$row[3]."</td>";
+    //Display delete and update button for each row
+    //a form for each row of the table
+    echo '<form action="personal.php" method="POST">';
+    
+    //hidden input contains the id when button update or delete is clicked it will submit the id
+    echo'<input  type="hidden" name="id_goal" value="'.$row[0].'"></input>';
+    
+    //another hidden input contain the type ( we will use this field to redirect back from the update form)
+    echo'<input  type="hidden" name="goalType" value="personal"></input>';
+    echo "<td><input type='submit' name='delete' value='delete'></input><td>";
+    echo '</form>';
+    
+    //a form for each row of the table
+    echo '<form action="update.php" method="POST">';
+    //( for the delete also )hidden input contains the id when button update or delete is clicked it will submit the id
+    echo'<input  type="hidden" name="id_goal" value="'.$row[0].'"></input>';
+    
+    //( for the delete also )another hidden input contain the type ( we will use this field to redirect back from the update form)
+    echo'<input  type="hidden" name="goalType" value="personal"></input>';
+    echo "<td><input type='submit' name='update' value='update'></input><td>";
+    echo '</form>';
+      
+      echo "</tr>";
+    
+      }
+     echo "</table>";
+
+    }
+
+?>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/ninquery.js"></script>
+</div>
+</div>
+</section>
+</center>
+</body>
+</html>
